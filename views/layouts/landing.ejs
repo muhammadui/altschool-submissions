@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Manager - Boost Your Productivity</title>
+    <link href="/css/output.css" rel="stylesheet" />
+
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-3xl font-bold text-blue-600">TodoApp</a>
+                    
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/login" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Login</a>
+                    <a href="/signup" class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-100 py-16 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+            <div class="flex flex-col justify-center space-y-8">
+                <h1 class="text-4xl font-extrabold text-gray-900 leading-tight md:text-5xl">
+                    Organize Your Life. Boost Your Productivity.
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Manage tasks effortlessly with TodoApp. Stay on top of your personal and professional goals with our intuitive interface.
+                </p>
+                <a href="/signup" class="md:max-w-fit inline-block bg-blue-600 text-white px-8 py-3 w-full text-lg font-medium rounded hover:bg-blue-700 transition">Get Started</a>
+            </div>
+            <div class="flex justify-center bg-white p-4 rounded-lg items-center">
+                <img src="img/hero-illustration.svg" alt="Hero Illustration" class="w-full max-w-md mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Features You'll Love</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white p-6 rounded-xl shadow-xl mb-6">
+                        <h3 class="text-xl font-semibold mb-4">Task Management</h3>
+                        <p class="text-gray-100">
+                            Easily create, organize, and track your tasks with priority and deadlines.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white p-6 rounded-xl shadow-xl mb-6">
+                        <h3 class="text-xl font-semibold mb-4">Collaboration</h3>
+                        <p class="text-gray-100">
+                            Collaborate with your team, share tasks, and track progress in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white p-6 rounded-xl shadow-xl mb-6">
+                        <h3 class="text-xl font-semibold mb-4">Cross-Platform</h3>
+                        <p class="text-gray-100">
+                            Stay connected and productive across all your devices, anytime, anywhere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Pricing Plans</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Basic</h3>
+                    <p class="text-lg text-gray-600 mb-6">For individuals who need a simple task manager.</p>
+                    <div class="text-4xl font-bold text-blue-600 mb-4">$0 / month</div>
+                    <ul class="text-left text-gray-600 mb-6">
+                        <li>Task Creation</li>
+                        <li>Basic Notifications</li>
+                        <li>Cross-Platform Sync</li>
+                    </ul>
+                    <a href="/signup" class="w-max inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">Start Free</a>
+                </div>
+                <!-- Pro Plan -->
+                <div class="bg-blue-600 text-white shadow-lg rounded-lg p-8 text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+                    <p class="text-lg mb-6">For teams and power users who need more features.</p>
+                    <div class="text-4xl font-bold mb-4">$15 / month</div>
+                    <ul class="text-left mb-6">
+                        <li>Advanced Task Management</li>
+                        <li>Team Collaboration</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="/signup" class="w-max inline-block bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition">Start Pro</a>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Enterprise</h3>
+                    <p class="text-lg text-gray-600 mb-6">Custom solutions for large teams and enterprises.</p>
+                    <div class="text-4xl font-bold text-blue-600 mb-4">Contact Us</div>
+                    <ul class="text-left text-gray-600 mb-6">
+                        <li>Custom Integrations</li>
+                        <li>Dedicated Support</li>
+                        <li>Advanced Analytics</li>
+                    </ul>
+                    <a href="mailto:support@todoapp.com" class="w-max inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Have questions or need support? We're here to help!
+            </p>
+            <a href="mailto:support@todoapp.com" class="w-max inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">Send an Email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg mb-2">&copy; 2024 TodoApp. All rights reserved.</p>
+            <div class="space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

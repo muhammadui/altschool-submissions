@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Todo App</title>
+    <link href="/css/output.css" rel="stylesheet" />
+
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white px-4  p-8 rounded-lg  shadow-md min-w-80 md:w-96">
+      <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+      <form action="/login" method="POST" class="space-y-4 ">
+        <div>
+          <label for="username" class="block mb-2">Username</label>
+          <input
+            type="text"
+            name="email"
+            required
+            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <div>
+          <label for="password" class="block mb-2">Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <% if (typeof error !== 'undefined') { %>
+        <div
+          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+          role="alert"
+        >
+          <%= error %>
+        </div>
+        <% } %>
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
+        >
+          Login
+        </button>
+      </form>
+      <div class="mt-4 text-center">
+        <p class="text-sm text-gray-600">
+          Don't have an account?
+          <a href="/signup" class="text-blue-500 hover:underline">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

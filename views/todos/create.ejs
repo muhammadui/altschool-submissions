@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Todo - Todo App</title>
+    <link href="/css/output.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">Create New Todo</h2>
+        <form action="/todos/create" method="POST" class="space-y-4">
+            <div>
+                <label for="title" class="block mb-2">Title</label>
+                <input 
+                    type="text" 
+                    name="title" 
+                    required 
+                    maxlength="100"
+                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter todo title"
+                >
+                <p class="text-xs text-gray-500 mt-1">Maximum 100 characters</p>
+            </div>
+            <div>
+                <label for="description" class="block mb-2">Description (Optional)</label>
+                <textarea 
+                    name="description" 
+                    maxlength="500"
+                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Add more details"
+                    rows="4"
+                ></textarea>
+                <p class="text-xs text-gray-500 mt-1">Maximum 500 characters</p>
+            </div>
+            <% if (typeof error !== 'undefined') { %>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <div class="flex space-x-2">
+                <button 
+                    type="submit" 
+                    class="flex-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
+                >
+                    Create Todo
+                </button>
+                <a 
+                    href="/todos" 
+                    class="flex-1 bg-gray-200 text-gray-700 py-2 rounded-md text-center hover:bg-gray-300 transition duration-300"
+                >
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

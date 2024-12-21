@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todos - Todo App</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-md rounded-lg">
+            <div class="flex justify-between items-center p-6 border-b">
+                <div>
+                    <h1 class="text-2xl font-bold"><%= greeting %>, <%= user.fullname %></h1>
+                    <p class="text-gray-500 text-sm">Manage your tasks efficiently</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a 
+                        href="/todos/create" 
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                    >
+                        + Add New Todo
+                    </a>
+                    <a 
+                        href="/logout" 
+                        class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                    >
+                        Logout
+                    </a>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex mb-4 space-x-2">
+                    <a 
+                        href="/todos?status=pending" 
+                        class="<%= currentStatus === 'pending' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700' %> px-4 py-2 rounded"
+                    >
+                        Pending
+                    </a>
+                    <a 
+                        href="/todos?status=completed" 
+                        class="<%= currentStatus === 'completed' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700' %> px-4 py-2 rounded"
+                    >
+                        Completed
+                    </a>
+                </div>
+
+                <% if (todos.length === 0) { %>
+                    <div class="text-center text-gray-500 py-8">
+                        No todos found in <%= currentStatus %> status.
+                    </div>
+                <% } else { %>
+                    <div class="space-y-4">
+                        <% todos.forEach(todo => { %>
+                            <div class="bg-white border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <h3 class="font-semibold"><%= todo.title %></h3>
+                                    <% if (todo.description) { %>
+                                        <p class="text-gray-500 text-sm"><%= todo.description %></p>
+                                    <% } %>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <% if (todo.status === 'pending') { %>
+                                        <form action="/todos/<%= todo._id %>/status" method="POST" class="inline">
+                                            <input type="hidden" name="status" value="completed">
+                                            <button 
+                                                type="submit" 
+                                                class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"
+                                            >
+                                                Complete
+                                            </button>
+                                        </form>
+                                    <% } %>
+                                    <form action="/todos/<%= todo._id %>/status" method="POST" class="inline">
+                                        <input type="hidden" name="status" value="deleted">
+                                        <button 
+                                            type="submit" 
+                                            class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                                        >
+                                            Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
