@@ -4,7 +4,6 @@ A full-stack todo application with authentication and task management capabiliti
 
 ## Live Demo
 
-[Live Demo ↗](https://r2da.onrender.com/)
 <a href="https://r2da.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
 
 ### Demo Login
