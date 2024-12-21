@@ -2,6 +2,16 @@
 
 A full-stack todo application with authentication and task management capabilities.
 
+## Live Demo
+
+[Live Demo ↗](https://r2da.onrender.com/){:target="\_blank"}
+
+### Demo Login
+
+- **Email**: `demo@todo.app`
+- **Password**: `Password@2doApp`
+  _Or feel free to sign up with your own credentials_
+
 ## Features
 
 - User Authentication (Signup/Login/Logout)
