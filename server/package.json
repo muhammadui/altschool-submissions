@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.mjs",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"nodemon app.mjs\" \"npx tailwindcss -i ./public/input.css -o ./public/output.css --watch\"",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "canvas-confetti": "^1.9.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.8.4",
+    "mongoose-paginate-v2": "^1.8.5",
+    "morgan": "^1.10.0",
+    "resend": "^4.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "tailwindcss": "^3.4.16"
+  }
+}

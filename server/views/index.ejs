@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrate Caffietie</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 flex items-center  overflow-x-hidden justify-center h-dvh w-dvw">
+    <div class="container items-center justify-center flex flex-col ">
+        <div class="text-center bg-white max-w-xl p-8 rounded-lg flex-col shadow-lg">
+            <h1 class="text-4xl font-bold text-blue-900">🎉 Welcome  🎉</h1>
+            <p class="mt-4 text-lg text-gray-700">Welcome to Blog API</p>
+            <p class="mt-2 text-sm text-gray-500">Your gateway to creating, sharing, and exploring amazing stories!</p>
+    
+            <div class="mt-6">
+                <a href="/api-docs" class="text-white bg-blue-950 px-4 py-2 rounded hover:bg-blue-9wuhjn700">Explore API Docs</a>
+            </div>
+           
+        </div>
+        <footer class=" absolute bottom-0 w-full bg-blue-950">
+            <div class="text-slate-50">
+                <p>&copy Alright Resived ALT/MY/ID</p>
+            </div>
+    </div>
+   
+    </footer>
+    
+    <!-- Canvas-Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Ensure the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            // Run confetti effect
+            const duration = 5 * 1000; // 5 seconds
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        });
+    </script>
+</body>
+</html>
