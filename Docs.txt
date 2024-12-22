@@ -1,9 +1,0 @@
-Dec 21 02:10:06 PM==> Your service is live 🎉
-Dec 21 02:13:34 PM2024-12-21 13:13:34 error: Signup process error: E11000 duplicate key error collection: todo_app.users index: username_1 dup key: { username: null }
-Dec 21 02:13:34 PMMongoServerError: E11000 duplicate key error collection: 
-
-Solution
-Mongodb Production error.
-
-
-db.users.dropIndex("username_1")
